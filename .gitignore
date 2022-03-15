@@ -1,5 +1,5 @@
 .vs/
-gradle/
+.gradle/
 .idea/
 build/
 logs/
