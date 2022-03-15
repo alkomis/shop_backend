@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ProductRepositoryTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ProductRepositoryTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.alkomis.shop.repository.html">com.alkomis.shop.repository</a> &gt; ProductRepositoryTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.481s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">findAllByCategoryId_getListOfProductsByIdOfCategory_emptyList()</td>
+<td class="success">0.645s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findAllByCategoryId_getListOfProductsByIdOfCategory_listOfProduct()</td>
+<td class="success">0.836s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2022-03-15 10:41:28 [Test worker] ?[34mINFO ?[0;39m o.s.b.t.a.o.j.DataJpaTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.alkomis.shop.repository.ProductRepositoryTest], using SpringBootContextLoader
+2022-03-15 10:41:28 [Test worker] ?[34mINFO ?[0;39m o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.alkomis.shop.repository.ProductRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-03-15 10:41:28 [Test worker] ?[34mINFO ?[0;39m o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.alkomis.shop.repository.ProductRepositoryTest]: ProductRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-03-15 10:41:28 [Test worker] ?[34mINFO ?[0;39m o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.alkomis.shop.Main for test class com.alkomis.shop.repository.ProductRepositoryTest
+2022-03-15 10:41:28 [Test worker] ?[34mINFO ?[0;39m o.s.b.t.a.o.j.DataJpaTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-03-15 10:41:28 [Test worker] ?[34mINFO ?[0;39m o.s.b.t.a.o.j.DataJpaTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4823f3b8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@85446a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4efb7c99, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5563a63f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@20a3118, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28068327, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3d8c3d0a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@751636da, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@26c75b91, org.springframework.test.context.event.EventPublishingTestExecutionListener@3a44ebd5, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@667ce5fa, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2298af09, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3e1f6318, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@23182d4d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@22ca5fe1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@45cd5c56, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@8fe054]
+2022-03-15 10:41:28 [Test worker] ?[34mINFO ?[0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-15 10:41:28 [Test worker] ?[34mINFO ?[0;39m o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+Hibernate: drop table if exists categories CASCADE 
+Hibernate: drop table if exists product_properties CASCADE 
+Hibernate: drop table if exists products CASCADE 
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.3)
+
+2022-03-15 10:41:28 [Test worker] ?[34mINFO ?[0;39m c.a.s.r.ProductRepositoryTest - Starting ProductRepositoryTest using Java 17.0.2 on DESKTOP-OUNUL9B with PID 2952 (started by Александр in D:\Java\Projects\shop)
+2022-03-15 10:41:28 [Test worker] ?[34mINFO ?[0;39m c.a.s.r.ProductRepositoryTest - No active profile set, falling back to default profiles: default
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:0e620675-5e6d-4e02-91d6-4326dc7c68f4;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table if exists categories CASCADE 
+Hibernate: drop table if exists product_properties CASCADE 
+Hibernate: drop table if exists products CASCADE 
+Hibernate: create table categories (id bigint generated by default as identity, title varchar(255), primary key (id))
+Hibernate: create table product_properties (id bigint generated by default as identity, color varchar(255), image_link varchar(255), size double not null, stock integer not null, product bigint, primary key (id))
+Hibernate: create table products (id bigint generated by default as identity, archive boolean not null, brand varchar(255), description varchar(255), price decimal(19,2), target_audience varchar(255), title varchar(255), category_id bigint, primary key (id))
+Hibernate: alter table product_properties add constraint FKd6cr8vqkic9s3u00v71tw3ih3 foreign key (product) references products
+Hibernate: alter table products add constraint FKog2rp4qthbtt2lfyhfo32lsw9 foreign key (category_id) references categories
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m c.a.s.r.ProductRepositoryTest - Started ProductRepositoryTest in 0.739 seconds (JVM running for 17.606)
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@6f823df7 testClass = ProductRepositoryTest, testInstance = com.alkomis.shop.repository.ProductRepositoryTest@4afdcdf6, testMethod = findAllByCategoryId_getListOfProductsByIdOfCategory_listOfProduct@ProductRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@75364777 testClass = ProductRepositoryTest, locations = '{}', classes = '{class com.alkomis.shop.Main}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@4aa83f4f, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@61e94def, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@497108fd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@23d1e5d0, [ImportsContextCustomizer@48028e11 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@53dacd14, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@47c4ecdc, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@62325b44]; rollback [true]
+Hibernate: select product0_.id as id1_2_2_, product0_.archive as archive2_2_2_, product0_.brand as brand3_2_2_, product0_.category_id as category8_2_2_, product0_.description as descript4_2_2_, product0_.price as price5_2_2_, product0_.target_audience as target_a6_2_2_, product0_.title as title7_2_2_, category1_.id as id1_0_0_, category1_.title as title2_0_0_, productpro2_.product as product6_1_4_, productpro2_.id as id1_1_4_, productpro2_.id as id1_1_1_, productpro2_.color as color2_1_1_, productpro2_.image_link as image_li3_1_1_, productpro2_.size as size4_1_1_, productpro2_.stock as stock5_1_1_ from products product0_ left outer join categories category1_ on product0_.category_id=category1_.id left outer join product_properties productpro2_ on product0_.id=productpro2_.product where product0_.id=?
+Hibernate: select category0_.id as id1_0_1_, category0_.title as title2_0_1_, product1_.category_id as category8_2_3_, product1_.id as id1_2_3_, product1_.id as id1_2_0_, product1_.archive as archive2_2_0_, product1_.brand as brand3_2_0_, product1_.category_id as category8_2_0_, product1_.description as descript4_2_0_, product1_.price as price5_2_0_, product1_.target_audience as target_a6_2_0_, product1_.title as title7_2_0_ from categories category0_ left outer join products product1_ on category0_.id=product1_.category_id where category0_.id=?
+Hibernate: insert into categories (id, title) values (null, ?)
+Hibernate: insert into products (id, archive, brand, category_id, description, price, target_audience, title) values (null, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select product0_.id as id1_2_2_, product0_.archive as archive2_2_2_, product0_.brand as brand3_2_2_, product0_.category_id as category8_2_2_, product0_.description as descript4_2_2_, product0_.price as price5_2_2_, product0_.target_audience as target_a6_2_2_, product0_.title as title7_2_2_, category1_.id as id1_0_0_, category1_.title as title2_0_0_, productpro2_.product as product6_1_4_, productpro2_.id as id1_1_4_, productpro2_.id as id1_1_1_, productpro2_.color as color2_1_1_, productpro2_.image_link as image_li3_1_1_, productpro2_.size as size4_1_1_, productpro2_.stock as stock5_1_1_ from products product0_ left outer join categories category1_ on product0_.category_id=category1_.id left outer join product_properties productpro2_ on product0_.id=productpro2_.product where product0_.id=?
+Hibernate: insert into products (id, archive, brand, category_id, description, price, target_audience, title) values (null, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select product0_.id as id1_2_, product0_.archive as archive2_2_, product0_.brand as brand3_2_, product0_.category_id as category8_2_, product0_.description as descript4_2_, product0_.price as price5_2_, product0_.target_audience as target_a6_2_, product0_.title as title7_2_ from products product0_ left outer join categories category1_ on product0_.category_id=category1_.id where category1_.id=?
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@6f823df7 testClass = ProductRepositoryTest, testInstance = com.alkomis.shop.repository.ProductRepositoryTest@4afdcdf6, testMethod = findAllByCategoryId_getListOfProductsByIdOfCategory_listOfProduct@ProductRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@75364777 testClass = ProductRepositoryTest, locations = '{}', classes = '{class com.alkomis.shop.Main}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@4aa83f4f, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@61e94def, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@497108fd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@23d1e5d0, [ImportsContextCustomizer@48028e11 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@53dacd14, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@47c4ecdc, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+Hibernate: drop table if exists categories CASCADE 
+Hibernate: drop table if exists product_properties CASCADE 
+Hibernate: drop table if exists products CASCADE 
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.3)
+
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m c.a.s.r.ProductRepositoryTest - Starting ProductRepositoryTest using Java 17.0.2 on DESKTOP-OUNUL9B with PID 2952 (started by Александр in D:\Java\Projects\shop)
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m c.a.s.r.ProductRepositoryTest - No active profile set, falling back to default profiles: default
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:133593ac-fc5f-40cb-8c4c-5ecc4941de90;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-15 10:41:29 [Test worker] ?[34mINFO ?[0;39m org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table if exists categories CASCADE 
+Hibernate: drop table if exists product_properties CASCADE 
+Hibernate: drop table if exists products CASCADE 
+Hibernate: create table categories (id bigint generated by default as identity, title varchar(255), primary key (id))
+Hibernate: create table product_properties (id bigint generated by default as identity, color varchar(255), image_link varchar(255), size double not null, stock integer not null, product bigint, primary key (id))
+Hibernate: create table products (id bigint generated by default as identity, archive boolean not null, brand varchar(255), description varchar(255), price decimal(19,2), target_audience varchar(255), title varchar(255), category_id bigint, primary key (id))
+Hibernate: alter table product_properties add constraint FKd6cr8vqkic9s3u00v71tw3ih3 foreign key (product) references products
+Hibernate: alter table products add constraint FKog2rp4qthbtt2lfyhfo32lsw9 foreign key (category_id) references categories
+2022-03-15 10:41:30 [Test worker] ?[34mINFO ?[0;39m o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-15 10:41:30 [Test worker] ?[34mINFO ?[0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-15 10:41:30 [Test worker] ?[34mINFO ?[0;39m c.a.s.r.ProductRepositoryTest - Started ProductRepositoryTest in 0.592 seconds (JVM running for 18.279)
+2022-03-15 10:41:30 [Test worker] ?[34mINFO ?[0;39m o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@6f823df7 testClass = ProductRepositoryTest, testInstance = com.alkomis.shop.repository.ProductRepositoryTest@4893d628, testMethod = findAllByCategoryId_getListOfProductsByIdOfCategory_emptyList@ProductRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@75364777 testClass = ProductRepositoryTest, locations = '{}', classes = '{class com.alkomis.shop.Main}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@4aa83f4f, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@61e94def, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@497108fd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@23d1e5d0, [ImportsContextCustomizer@48028e11 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@53dacd14, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@47c4ecdc, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@537979aa]; rollback [true]
+Hibernate: select product0_.id as id1_2_, product0_.archive as archive2_2_, product0_.brand as brand3_2_, product0_.category_id as category8_2_, product0_.description as descript4_2_, product0_.price as price5_2_, product0_.target_audience as target_a6_2_, product0_.title as title7_2_ from products product0_ left outer join categories category1_ on product0_.category_id=category1_.id where category1_.id=?
+2022-03-15 10:41:30 [Test worker] ?[34mINFO ?[0;39m o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@6f823df7 testClass = ProductRepositoryTest, testInstance = com.alkomis.shop.repository.ProductRepositoryTest@4893d628, testMethod = findAllByCategoryId_getListOfProductsByIdOfCategory_emptyList@ProductRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@75364777 testClass = ProductRepositoryTest, locations = '{}', classes = '{class com.alkomis.shop.Main}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@4aa83f4f, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@61e94def, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@497108fd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@23d1e5d0, [ImportsContextCustomizer@48028e11 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@53dacd14, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@47c4ecdc, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4.1</a> at 15 мар. 2022 г., 10:41:31</p>
+</div>
+</div>
+</body>
+</html>
