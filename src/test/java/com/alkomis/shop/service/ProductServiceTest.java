@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.math.BigDecimal;
@@ -63,7 +64,7 @@ public class ProductServiceTest {
         List<ProductDTO> testResult = new ArrayList<>();
         testResult.add(productDTO);
 
-        when(productRepository.findAll()).thenReturn(List.of(product));
+        when(productRepository.findAll(any(Specification.class))).thenReturn(List.of(product));
         when(productMapper.productToProductDto(any(Product.class))).thenReturn(productDTO);
 
         assertEquals(testResult, productService.getAllProducts());
@@ -75,7 +76,7 @@ public class ProductServiceTest {
         // Changed archive to true, so method will not find available products and throw exception.
         product.setArchive(true);
 
-        when(productRepository.findAll()).thenReturn(List.of(product));
+        when(productRepository.findAll(any(Specification.class))).thenReturn(List.of());
         when(productMapper.productToProductDto(any(Product.class))).thenReturn(productDTO);
 
         assertThrows(ElementNotFoundException.class, () -> productService.getAllProducts());
@@ -84,7 +85,7 @@ public class ProductServiceTest {
     @Test
     public void getProductById_getSpecificProduct_DTOOfProduct() {
 
-        when(productRepository.findById(anyLong())).thenReturn(Optional.of(product));
+        when(productRepository.findOne(any(Specification.class))).thenReturn(Optional.of(product));
         when(productMapper.productToProductDto(any(Product.class))).thenReturn(productDTO);
 
         assertEquals(productDTO, productService.getProductById(1));
@@ -96,7 +97,7 @@ public class ProductServiceTest {
         // Changed archive to true, so method will not find product and throw exception.
         product.setArchive(true);
 
-        when(productRepository.findById(any(Long.class))).thenReturn(Optional.of(product));
+        when(productRepository.findOne(any(Specification.class))).thenReturn(Optional.empty());
         when(productMapper.productToProductDto(any(Product.class))).thenReturn(productDTO);
 
         assertThrows(ElementNotFoundException.class, () -> productService.getProductById(any(Long.class)));
@@ -116,12 +117,12 @@ public class ProductServiceTest {
     public void updateProductById_updateProductSuccessfully_exitSuccessfully() {
         when(productMapper.productDTOToProduct(any(ProductDTO.class))).thenReturn(product);
         when(categoryService.findTopCategoryByTitle(any(String.class))).thenReturn(product.getCategory());
-        when(productRepository.findById(anyLong())).thenReturn(Optional.of(product));
+        when(productRepository.findOne(any(Specification.class))).thenReturn(Optional.of(product));
         when(productRepository.save(any(Product.class))).thenReturn(product);
 
         productService.updateProductById(anyLong(), productDTO);
 
-        verify(productRepository, times(1)).findById(anyLong());
+        verify(productRepository, times(1)).findOne(any(Specification.class));
         verify(productMapper, times(1)).productDTOToProduct(any(ProductDTO.class));
         verify(productRepository, times(1)).save(any(Product.class));
         verify(categoryService, times(2)).findTopCategoryByTitle(any(String.class));
@@ -134,7 +135,7 @@ public class ProductServiceTest {
         product.setArchive(true);
 
         when(productMapper.productDTOToProduct(any(ProductDTO.class))).thenReturn(product);
-        when(productRepository.findById(anyLong())).thenReturn(Optional.of(product));
+        when(productRepository.findOne(any(Specification.class))).thenReturn(Optional.empty());
         when(productRepository.save(any(Product.class))).thenReturn(product);
 
         assertThrows(ElementNotFoundException.class, () -> productService.updateProductById(anyLong(), productDTO));
@@ -142,12 +143,12 @@ public class ProductServiceTest {
 
     @Test
     public void deleteProductById_markProductDeleted_exitSuccessfully() {
-        when(productRepository.findById(anyLong())).thenReturn(Optional.of(product));
+        when(productRepository.findOne(any(Specification.class))).thenReturn(Optional.of(product));
         when(productRepository.save(any(Product.class))).thenReturn(product);
 
         productService.deleteProductById(1);
 
-        verify(productRepository, times(1)).findById(anyLong());
+        verify(productRepository, times(1)).findOne(any(Specification.class));
         verify(productRepository, times(1)).save(any(Product.class));
         assertTrue(product.isArchive());
     }
@@ -158,7 +159,7 @@ public class ProductServiceTest {
         // Changed archive to true, so method will not find product for delete operation and throw exception.
         product.setArchive(true);
 
-        when(productRepository.findById(anyLong())).thenReturn(Optional.of(product));
+        when(productRepository.findOne(any(Specification.class))).thenReturn(Optional.empty());
         when(productRepository.save(any(Product.class))).thenReturn(product);
 
         assertThrows(ElementNotFoundException.class, () -> productService.deleteProductById(1));

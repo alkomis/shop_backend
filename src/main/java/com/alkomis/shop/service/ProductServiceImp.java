@@ -14,6 +14,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
+
+import static com.alkomis.shop.specifications.ProductSpecifications.*;
+import static org.springframework.data.jpa.domain.Specification.where;
 
 /**
  * Class contains implementation of {@link ProductService} interface.
@@ -35,9 +39,8 @@ public class ProductServiceImp implements ProductService {
     @Override
     @Transactional
     public List<ProductDTO> getAllProducts() {
-        List<ProductDTO> allProducts = productRepository.findAll()
+        List<ProductDTO> allProducts = productRepository.findAll(activeProducts())
                 .stream()
-                .filter(product -> !product.isArchive())
                 .map(product -> productMapper.productToProductDto(product)).toList();
 
         if (allProducts.isEmpty()) {
@@ -45,25 +48,25 @@ public class ProductServiceImp implements ProductService {
             throw new ElementNotFoundException("Can't find any products.");
         }
 
-        log.info("Found products in the database: " + allProducts);
+        log.info("Found products in the database: {}.", allProducts);
         return allProducts;
     }
 
     @Override
     @Transactional
     public ProductDTO getProductById(long id) {
-        List<ProductDTO> existingProduct = productRepository.findById(id)
+        Optional<ProductDTO> existingProduct = productRepository.findOne(where(byId(id).and(activeProducts())))
                 .stream()
-                .filter(product -> !product.isArchive())
-                .map(product -> productMapper.productToProductDto(product)).toList();
+                .map(product -> productMapper.productToProductDto(product)).findFirst();
 
         if (existingProduct.isEmpty()) {
-            log.error("Failed to find non-archive product with id: " + id + ".");
-            throw new ElementNotFoundException("Product with id: " + id + " does not exist.");
+            log.error("Failed to find non-archive product with id: {}.", id);
+            throw new ElementNotFoundException("Product with id: " + id + "  does not exist.");
         }
 
-        log.info("Found product by id: " + id + " in database. " + existingProduct.get(0));
-        return existingProduct.get(0);
+        ProductDTO result = existingProduct.get();
+        log.info("Found product by id: {} in database. {}", id, result);
+        return result;
     }
 
     @Override
@@ -73,17 +76,16 @@ public class ProductServiceImp implements ProductService {
         ProductDTO addedProductDto = productMapper.productToProductDto(productToAdd);
         productToAdd.setCategory(categoryValidation(productDTO.getCategory()));
         productRepository.save(productToAdd);
-        log.info("Product: " + productToAdd + " added to database.");
+        log.info("Product: {} added to database.", productToAdd);
         return addedProductDto;
     }
 
     @Override
     @Transactional
     public void updateProductById(long id, ProductDTO productDTO) {
-        Product existingProduct = productRepository.findById(id)
-                .filter(product -> !product.isArchive())
+        Product existingProduct = productRepository.findOne(byId(id))
                 .orElseThrow(() -> {
-                    log.error("Failed to find non-archive product with id: " + id + " for update in database.");
+                    log.error("Failed to find non-archive product with id: {} for update in database.", id);
                     return new ElementNotFoundException("Product with id: " + id + " does not exist.");
                 });
         Product updatedProduct = productMapper.productDTOToProduct(productDTO);
@@ -99,39 +101,34 @@ public class ProductServiceImp implements ProductService {
 
         productRepository.save(existingProduct);
 
-        log.info("Product with id: " + id + " was updated to following parameters: " + existingProduct + ".");
+        log.info("Product with id: {} was updated to following parameters: {}.", id, updatedProduct);
     }
 
     @Override
     @Transactional
     public void deleteProductById(long id) {
-        Product existingProduct = productRepository.findById(id)
-                .filter(product -> !product.isArchive())
+        Product existingProduct = productRepository.findOne(where(byId(id).and(activeProducts())))
                 .orElseThrow(() -> {
-                    log.error("Failed to find non-archive product with id: " + id + " for deleting in database.");
+                    log.error("Failed to find non-archive product with id: {} for deleting in database.", id);
                     return new ElementNotFoundException("Product with id: " + id + " does not exist.");
                 });
         existingProduct.setArchive(true);
         productRepository.save(existingProduct);
-        log.info("Product with id: " + id + " was marked as deleted.");
+        log.info("Product with id: {} was marked as deleted.", id);
     }
 
     @Override
     @Transactional
     public List<ProductDTO> findProductsByCategoryId(long id) {
-        List<Product> allProducts = productRepository.findAllByCategoryId(id);
-        List<ProductDTO> allProductsDTO = allProducts
-                .stream()
-                .filter(product -> !product.isArchive())
-                .map(product -> productMapper.productToProductDto(product)).toList();
+        List<Product> allProducts = productRepository.findAll(where(byCategoryId(id).and(activeProducts())));
 
         if (allProducts.isEmpty()) {
-            log.error("There is no available non-archive products in database with category id " + id + ".");
+            log.error("There is no available non-archive products in database with category id {}. ", id);
             throw new ElementNotFoundException("Can't find any products in category with id " + id + ".");
         }
 
-        log.info("Found products in the database: " + allProducts);
-        return allProductsDTO;
+        log.info("Found products in the database: {}.", allProducts);
+        return allProducts.stream().map(product -> productMapper.productToProductDto(product)).toList();
     }
 
     /**

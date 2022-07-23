@@ -6,7 +6,7 @@ plugins {
 
 group 'com.alkomis'
 version '1.0-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '16'
 
 configurations {
     compileOnly {
